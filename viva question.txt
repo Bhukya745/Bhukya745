@@ -1,1 +1,93 @@
+1.	What is Docker?
+Docker is an open-source containerization platform. It is used to automate the deployment of any application, using lightweight, portable containers.
+
+2.	What are the basic requirements for the docker to run on any system?
+Docker can run on both Windows and Linux platforms.
+For the Windows platform, docker atleast needs Windows 10 64bit with 2GB RAM space. For the lower versions, docker can be installed by taking help of the toolbox. Docker can be downloaded from https://docs.docker.com/docker-for-windows/ website.
+For Linux platforms, Docker can run on various Linux flavors such as Ubuntu >=12.04, Fedora >=19, RHEL >=6.5, CentOS >=6 etc
+
+3.	explain the various Docker components.
+The three main Docker components are:
+Docker Client. Performs Docker build pull and run operations to open up communication with the Docker Host. The Docker command then employs Docker API to call any queries to run.
+Docker Host. Contains Docker daemon, containers, and associated images. The Docker daemon establishes a connection with the Registry. The stored images are the type of metadata dedicated to containerized applications.
+Registry. This is where Docker images are stored. There are two of them, a public registry and a private one. Docker Hub and Docker Cloud are two public registries available for use by anyone.
+ 
+
+4.	What is a container?
+Containers are deployed applications bundled with all necessary dependencies and configuration files. All of the elements share the same OS kernel. Since the container isn’t tied to any one IT infrastructure, it can run on a different system or the cloud.
+A container is a standard unit of software bundled with dependencies so that applications can be deployed fast and reliably b/w different computing platforms.
+Docker can be visualized as a big ship (docker) carrying huge boxes of products (containers).
+Docker container doesn’t require the installation of a separate operating system. Docker just relies or makes use of the kernel’s resources and its functionality to allocate them for the CPU and memory it relies on the kernel’s functionality and uses resource isolation for CPU and memory, and separate namespaces to isolate the application’s view of the OS (operating system).
+5.	What are docker images?
+They are executable packages(bundled with application code & dependencies, software packages, etc.) for the purpose of creating containers. Docker images can be deployed to any docker environment and the containers can be spun up there to run the application.
+6.	What is a DockerFile?
+It is a text file that has all commands which need to be run for building a given image.
+ 
+
+7.	What is a Docker Compose?
+It is a YAML file consisting of all the details regarding various services, networks, and volumes that are needed for setting up the Docker-based application. So, docker-compose is used for creating multiple containers, host them and establish communication between them. For the purpose of communication amongst the containers, ports are exposed by each and every container.
+8.	List the most commonly used instructions in Dockerfile?
+FROM: This is used to set the base image for upcoming instructions. A docker file is considered to be valid if it starts with the FROM instruction.
+LABEL: This is used for the image organization based on projects, modules, or licensing. It also helps in automation as we specify a key-value pair while defining a label that can be later accessed and handled programmatically.
+RUN: This command is used to execute instructions following it on the top of the current image in a new layer. Note that with each RUN command execution, we add layers on top of the image and then use that in subsequent steps.
+CMD: This command is used to provide default values of an executing container. In cases of multiple CMD commands the last instruction would be considered.
+9.	Differentiate between virtualization and containerization.
+The question indirectly translates to explaining the difference between virtual machines and Docker containers.
+Virtualization 	Containerization
+This helps developers to run and host multiple OS on the hardware of a single physical server.	This helps developers to deploy multiple applications using the same operating system on a single virtual machine or server.
+Hypervisors provide overall virtual machines to the guest operating systems. 	Containers ensure isolated environment/ user spaces are provided for running the applications. Any changes done within the container do not reflect on the host or other containers of the same host.
+These virtual machines form an abstraction of the system hardware layer this means that each virtual machine on the host acts like a physical machine.	Containers form abstraction of the application layer which means that each container constitutes a different application.
+
+
+10.	How many containers you can run in docker and what are the factors influencing this limit?
+There is no clearly defined limit to the number of containers that can be run within docker. But it all depends on the limitations - more specifically hardware restrictions. The size of the app and the CPU resources available are 2 important factors influencing this limit. In case your application is not very big and you have abundant CPU resources, then we can run a huge number of containers.
+11.	Describe the lifecycle of Docker Container?
+The different stages of the docker container from the start of creating it to its end are called the docker container life cycle. 
+The most important stages are:
+Created: This is the state where the container has just been created new but not started yet.
+Running: In this state, the container would be running with all its associated processes.
+Paused: This state happens when the running container has been paused.
+Stopped: This state happens when the running container has been stopped.
+Deleted: In this, the container is in a dead state.
+
+ 
+
+12.	How to use docker for multiple application environments?
+Docker-compose feature of docker will come to help here. In the docker-compose file, we can define multiple services, networks, and containers along with the volume mapping in a clean manner, and then we can just call the command “docker-compose up”.
+When there are multiple environments involved - it can be either dev, staging, uat, or production servers, we would want to define the server-specific dependencies and processes for running the application. In this case, we can go ahead with creating environment-specific docker-compose files of the name “docker-compose.{environment}.yml” and then based on the environment, we can set up and run the application
+13.	Is there any problem with just using the latest tag in a container orchestration environment? What is considered best practice for image tagging?
+If you’re running your image via the latest tag with a container orchestration environment like Kubernetes, it may cause a problem.
+The problem is if you push a new image with just the latest tag, you lose your old image and your deployments will use the new image. If the new image has any problem, your deployments might fail, resulting in downtime.
+When you use explicit version numbers to tag Docker images instead, you can roll back to old images easily. Also, when you push a new image to your private registry, your deployments will continue to use the old version number due to your tag until you’re ready to switch each of them over.
+The best practice of Docker image tagging is to use both types of tagging. First, tag your Docker images with latest and a version number, then push twice, separately for each tag. For example:
+docker tag nginx:latest nginx:0.0.1
+
+docker push nginx:latest
+docker push nginx:0.0.1
+
+14.	 How do you share a Docker image with others?
+Answer: To share a Docker image, push it to a Docker registry, such as Docker Hub.
+Example:
+1.	Tag the image:
+docker tag my-java-app username/my-java-app:latest
+2. Push the image:
+docker push username/my-java-app:latest
+3. Others can pull the image using:
+docker pull username/my-java-app:latest
+
+15.	How do you debug a running Docker container?
+Answer: To debug a running Docker container, you can use several commands:
+docker logs [container_id]: View the logs of a container.
+docker exec -it [container_id] /bin/bash: Access the container's shell interactively.
+docker inspect [container_id]: Retrieve detailed information about a container.
+Example:
+# View container logs
+docker logs my-java-app
+
+# Access the container's shell
+docker exec -it my-java-app /bin/bash
+
+# Inspect container details
+docker inspect my-java-app
+
 
