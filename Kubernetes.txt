@@ -1,0 +1,118 @@
+Top 40 Kubernetes Interview Questions and Answers
+1. What is Kubernetes?
+Kubernetes is an open-source container orchestration tool or system that is used to automate tasks such as the management, monitoring, scaling, and deployment of containerized applications. It is used to easily manage several containers (since it can handle grouping of containers), which provides for logical units that can be discovered and managed.
+2. What is orchestration when it comes to software and DevOps? 
+Orchestration refers to the integration of multiple services that allows them to automate processes or synchronize information in a timely fashion. Say, for example, you have six or seven microservices for an application to run. If you place them in separate containers, this would inevitably create obstacles for communication. Orchestration would help in such a situation by enabling all services in individual containers to work seamlessly to accomplish a single goal. 
+3. How are Kubernetes and Docker related?
+ Docker is an open-source platform used to handle software development. Its main benefit is that it packages the settings and dependencies that the software/application needs to run into a container, which allows for portability and several other advantages. Kubernetes allows for the manual linking and orchestration of several containers, running on multiple hosts that have been created using Docker. 
+4. What are the main differences between the Docker Swarm and Kubernetes?
+Docker Swarm is Docker’s native, open-source container orchestration platform that is used to cluster and schedule Docker containers. Swarm differs from Kubernetes in the following ways:
+Docker Swarm is more convenient to set up but doesn’t have a robust cluster, while Kubernetes is more complicated to set up but the benefit of having the assurance of a robust cluster
+Docker Swarm can’t do auto-scaling (as can Kubernetes); however, Docker scaling is five times faster than Kubernetes 
+Docker Swarm doesn’t have a GUI; Kubernetes has a GUI in the form of a dashboard 
+Docker Swarm does automatic load balancing of traffic between containers in a cluster, while Kubernetes requires manual intervention for load balancing such traffic  
+Docker requires third-party tools like ELK stack for logging and monitoring, while Kubernetes has integrated tools for the same 
+Docker Swarm can share storage volumes with any container easily, while Kubernetes can only share storage volumes with containers in the same pod
+Docker can deploy rolling updates but can’t deploy automatic rollbacks; Kubernetes can deploy rolling updates as well as automatic rollbacks
+5. What is the difference between deploying applications on hosts and containers?
+Deploying Applications consist of an architecture that has an operating system. The operating system will have a kernel that holds various libraries installed on the operating system needed for an application.
+Whereas container host refers to the system that runs the containerized processes. This kind is isolated from the other applications; therefore, the applications must have the necessary libraries. The binaries are separated from the rest of the system and cannot infringe any other application.
+6. What are the features of Kubernetes?
+Kubernetes places control for the user where the server will host the container. It will control how to launch. So, Kubernetes automates various manual processes. 
+Kubernetes manages various clusters at the same time. 
+It provides various additional services like management of containers, security, networking, and storage. 
+Kubernetes self-monitors the health of nodes and containers. 
+With Kubernetes, users can scale resources not only vertically but also horizontally that too easily and quickly.
+"DevOps is not a goal, but a never-ending process of continual improvement." - Jez Humble
+7. What are the main components of Kubernetes architecture?
+There are two primary components of Kubernetes Architecture: the master node and the worker node. Each of these components has individual components in them.
+8. Explain the working of the master node in Kubernetes?
+The master node dignifies the node that controls and manages the set of worker nodes. This kind resembles a cluster in Kubernetes. The nodes are responsible for the cluster management and the API used to configure and manage the resources within the collection. The master nodes of Kubernetes can run with Kubernetes itself, the asset of dedicated pods.
+Earn the Most Coveted DevOps Certification!
+DevOps Engineer Masters ProgramExplore Program
+ 
+9. What is the role of Kube-apiserver?
+This kind validates and provides configuration data for the API objects. It includes pods, services, replication controllers. Also, it provides REST operations and also the frontend of the cluster. This frontend cluster state is shared through which all other component interacts.
+10. What is a node in Kubernetes?
+A node is the smallest fundamental unit of computing hardware. It represents a single machine in a cluster, which could be a physical machine in a data center or a virtual machine from a cloud provider. Each machine can substitute any other machine in a Kubernetes cluster. The master in Kubernetes controls the nodes that have containers. 
+11. What does the node status contain?
+The main components of a node status are Address, Condition, Capacity, and Info.
+12. What process runs on Kubernetes Master Node? 
+The Kube-api server process runs on the master node and serves to scale the deployment of more instances.
+13. What is a pod in Kubernetes?
+Pods are high-level structures that wrap one or more containers. This is because containers are not run directly in Kubernetes. Containers in the same pod share a local network and the same resources, allowing them to easily communicate with other containers in the same pod as if they were on the same machine while at the same time maintaining a degree of isolation.
+14. What is the role of kube-apiserver and kube-scheduler?
+The kube – apiserver follows the scale-out architecture and, is the front-end of the master node control panel. This exposes all the APIs of the Kubernetes Master node components and is responsible for establishing communication between Kubernetes Node and the Kubernetes master components.
+The Kube-scheduler is responsible for distribution and management of workload on the worker nodes. So, it selects the most suitable node to run the unscheduled pod based on resource requirement and keeps a track of resource utilization. It ensures that the workload is not scheduled on already full nodes.The kube-scheduler assigns nodes to newly created pods.
+
+15. What is a cluster of containers in Kubernetes? 
+A cluster of containers is a set of machine elements that are nodes. Clusters initiate specific routes so that the containers running on the nodes can communicate with each other. In Kubernetes, the container engine (not the server of the Kubernetes API) provides hosting for the API server.
+16. What is Minikube?
+With the help of Minikube, users can use Kubernetes locally. This process lets the user run a single-node Kubernetes cluster on your personal computer, including Windows, macOS, and Linus PCs. With this, users can try out Kubernetes also for daily development work.
+17. What is the Kubernetes controller manager?
+The controller manager is a daemon that is used for embedding core control loops, garbage collection, and Namespace creation. It enables the running of multiple processes on the master node even though they are compiled to run as a single process. The primary controller managers that can run on the master node are the endpoints controller, service accounts controller, namespace controller, node controller, token controller, and replication controller.
+18. What is etcd?
+Kubernetes uses etcd as a distributed key-value store for all of its data, including metadata and configuration data, and allows nodes in Kubernetes clusters to read and write data. Although etcd was purposely built for CoreOS, it also works on a variety of operating systems (e.g., Linux, BSB, and OS X) because it is open-source. Etcd represents the state of a cluster at a specific moment in time and is a canonical hub for state management and cluster coordination of a Kubernetes cluster.
+19. What are the different services within Kubernetes?
+Different types of Kubernetes services include: 
+Cluster IP service
+Node Port service
+External Name Creation service and 
+Load Balancer service
+20. What is the LoadBalancer in Kubernetes? 
+The LoadBalancer service is used to expose services to the internet. A Network load balancer, for example, creates a single IP address that forwards all traffic to your service. 
+21. What is the difference between a replica set and a replication controller?
+A replication controller is referred to as RC in short. It is a wrapper on a pod. This provides additional functionality to the pods, which offers replicas. 
+It monitors the pods and automatically restarts them if they fail. If the node fails, this controller will respawn all the pods of that node on another node. If the pods die, they won't be spawned again unless wrapped around a replica set. 
+Replica Set, on the other hand, is referred to as rs in short. It is told as the next-generation replication controller. This kind of support has some selector types and supports the equality-based and the set-based selectors. 
+It allows filtering by label values and keys. To match the object, they have to satisfy all the specified label constraints.
+
+22. What is Kubelet?
+The kubelet is a service agent that controls and maintains a set of pods by watching for pod specs through the Kubernetes API server. It preserves the pod lifecycle by ensuring that a given set of containers are all running as they should. The kubelet runs on each node and enables the communication between the master and slave nodes.
+23. What is Kubectl?
+Kubectl is a CLI (command-line interface) that is used to run commands against Kubernetes clusters. As such, it controls the Kubernetes cluster manager through different create and manage commands on the Kubernetes component
+24. What is Kube-proxy? 
+Kube-proxy is an implementation of a load balancer and network proxy used to support service abstraction with other networking operations. Kube-proxy is responsible for directing traffic to the right container based on IP and the port number of incoming requests.
+25. How can you get a static IP for a Kubernetes load balancer? 
+A static IP for the Kubernetes load balancer can be achieved by changing DNS records since the Kubernetes Master can assign a new static IP address.
+
+26. Suppose a company built on monolithic architecture handles numerous products. Now, as the company expands in today’s scaling industry, their monolithic architecture started causing problems.
+How do you think the company shifted from monolithic to microservices and deploy their services containers?
+As the company’s goal is to shift from their monolithic application to microservices, they can end up building piece by piece, in parallel and just switch configurations in the background. Then they can put each of these built-in microservices on the Kubernetes platform. So, they can start by migrating their services once or twice and monitor them to make sure everything is running stable. Once they feel everything is going well, then they can migrate the rest of the application into their Kubernetes cluster.
+27. Consider a multinational company with a very much distributed system, with a large number of data centers, virtual machines, and many employees working on various tasks.
+How do you think can such a company manage all the tasks in a consistent way with Kubernetes?
+As all of us know that I.T. departments launch thousands of containers, with tasks running across a numerous number of nodes across the world in a distributed system.
+In such a situation the company can use something that offers them agility, scale-out capability, and DevOps practice to the cloud-based applications.
+So, the company can, therefore, use Kubernetes to customize their scheduling architecture and support multiple container formats. This makes it possible for the affinity between container tasks that gives greater efficiency with extensive support for various container networking solutions and container storage.
+28. Consider a situation, where a company wants to increase its efficiency and the speed of its technical operations by maintaining minimal costs.
+How do you think the company will try to achieve this?
+The company can implement the DevOps methodology, by building a CI/CD pipeline, but one problem that may occur here is the configurations may take time to go up and running. So, after implementing the CI/CD pipeline the company’s next step should be to work in the cloud environment. Once they start working on the cloud environment, they can schedule containers on a cluster and can orchestrate with the help of Kubernetes. This kind of approach will help the company reduce their deployment time, and also get faster across various environments.
+29. Suppose a company wants to revise it’s deployment methods and wants to build a platform which is much more scalable and responsive.
+How do you think this company can achieve this to satisfy their customers?
+In order to give millions of clients the digital experience they would expect, the company needs a platform that is scalable, and responsive, so that they could quickly get data to the client website. Now, to do this the company should move from their private data centers (if they are using any) to any cloud environment such as AWS. Not only this, but they should also implement the microservice architecture so that they can start using Docker containers. Once they have the base framework ready, then they can start using the best orchestration platform available i.e. Kubernetes. This would enable the teams to be autonomous in building applications and delivering them very quickly.
+30. Consider a multinational company with a very much distributed system, looking forward to solving the monolithic code base problem.
+How do you think the company can solve their problem?
+Well, to solve the problem, they can shift their monolithic code base to a microservice design and then each and every microservices can be considered as a container. So, all these containers can be deployed and orchestrated with the help of Kubernetes.
+31. You have an application deployed on Kubernetes that is experiencing increased traffic. How would you scale the application to handle the increased load?
+To scale the application, I would follow these steps:
+Identify the bottleneck: Analyze resource utilization, including CPU, memory, and network, to determine the limiting factor.
+Horizontal scaling: If the bottleneck is CPU or memory, I would scale the application horizontally by increasing the number of replicas using a Horizontal Pod Autoscaler (HPA).
+Vertical scaling: If the bottleneck is resource-specific, I would vertically scale the application by upgrading the resources allocated to each pod.
+Monitor and validate: Monitor the application’s performance after scaling to ensure the desired scalability is achieved without impacting stability.
+32. You have a Kubernetes deployment running a web application and need to perform a rolling update with zero downtime. How would you accomplish this?
+To achieve zero-downtime rolling updates, I would follow these steps:
+Create a new version of the container image with the required changes.
+Update the deployment’s image tag to the new version while keeping the replica count unchanged.
+Monitor the rollout progress using the Kubernetes rollout status command to ensure the update proceeds smoothly.
+Configure the deployment with a readiness probe to verify the availability and stability of the updated pods before considering them ready.
+If any issues occur, use Kubernetes’ rollback feature to revert to the previous version.
+Monitor the application’s logs and metrics to confirm that the rolling update was successful without any disruptions.
+33. A critical pod in your Kubernetes cluster fails. How would you identify the issue and recover the application?
+To identify the issue and recover the application, I would follow these steps:
+Check the pod’s status and events using the kubectl command to identify any error messages or crash loop errors.
+Inspect the pod’s logs to gather more information about the failure and identify any application-specific errors or exceptions.
+If the issue is related to resource constraints, adjust the resource allocations for the pod or the cluster.
+If the pod is stuck in a crash loop, review the pod’s configuration and ensure any required dependencies or configurations are correctly set up.
+If necessary, delete and recreate the pod to restart the application.
+Monitor the pod’s logs and metrics to verify that the application recovers successfully.
+
