@@ -1,0 +1,104 @@
+1.	What is Selenium?
+Selenium is an open-source (free) automated testing framework for validating web applications across multiple browsers and platforms. Selenium Test Scripts can be written in a variety of programming languages, including Java, C#, Python, and others. Selenium Testing is the term for testing done using the Selenium testing tool.
+2.	What are the Selenium suite components?
+Selenium is a package of several testing tools. It is therefore often referred to as a Selenium Suite with each of these tools designed to cater to a different testing requirement.
+The following are the different components of Selenium Suite:
+Selenium Integrated Development Environment (IDE): It is a Firefox/Chrome plug-in that is developed to speed up the creation of automation scripts by recording the user actions on the web browser and exporting them as a reusable script.
+Selenium Remote Control (RC): It is a server that enables users to generate test scripts in their preferred programming language. It accepts commands from the test scripts and sends them to the browser as Selenium core JavaScript commands, for the browser to behave accordingly.
+Selenium WebDriver: It is a programming interface that helps create and run test cases by directly communicating with the web browser and using its native compatibility to automate. Unlike RC, it doesn’t require an additional server to create and run test cases.
+Selenium Grid: It allows parallel execution of tests on different browsers and operating systems by distributing commands to other machines simultaneously.
+3.	What are the advantages of using Selenium as an automation tool?
+The following are the advantages of using Selenium for automated testing :
+Open-Source: Selenium's greatest strength, as previously said, is that it is a freeware and portable tool. There are no out-of-pocket expenses. The utility can be downloaded for free, and community-based help is also accessible.
+Language assistance: Java, Perl, Python, C#, Ruby, Groovy, JavaScript, and other languages are supported by Selenium. It has its own script, yet it is not constrained by it. It can work with a variety of languages, depending on the developers' and testers' preferences.
+Compatible with a variety of operating systems: Selenium may run on a variety of operating systems, including Windows, Mac OS X, Linux, and UNIX. A customized testing suite can be constructed on any platform and then executed on another using the Selenium suite of products. For example, you may write test cases in Windows and run them on a Linux system with ease.
+Browser compatibility: Selenium is compatible with a variety of web browsers, including Internet Explorer, Chrome, Firefox, Opera, and Safari. When running tests and testing them across multiple browsers at the same time, this becomes really useful.
+Programming languages and framework support: Selenium works with a variety of programming languages and frameworks. For source code compilation, it can, for example, integrate with ANT or Maven frameworks. It may also be used to test apps and generate reports using the TestNG framework. Continuous Integration (CI), can integrate with Jenkins or Hudson, and it can also integrate with other open-source tools to offer other functionalities.
+Tests on a variety of devices: On Android, iPhone, and Blackberry, Selenium Test Automation can be used to automate mobile web application testing. This can aid in the generation of necessary results and the ongoing resolution of bugs present in the application.
+Regular updates: Selenium support is based on a community, which allows for frequent updates and upgrades. These upgrades are simple to install and don't require any special training. Selenium is thus both resourceful and cost-effective.
+Selenium suites with a lot of content: Selenium is more than just a single tool or utility; it's a full set of numerous testing tools that's why it's called a Suite. Each tool is tailored to specific testing needs and test environment constraints. Selenium also includes features such as Selenium IDE, Selenium Grid, and Selenium Remote Control (RC).
+Ease with which it can be implemented: Selenium has a user-friendly interface that makes it simple to develop and perform tests. Its open-source capabilities allow users to script their own extensions, making them simple to create, alter actions, and manipulate at a high level. Selenium's reporting features are also one of the reasons for its popularity, as it allows testers to extract results and take action based on them.
+4.	What are the disadvantages of using Selenium as a testing tool?
+The following are the disadvantages of using Selenium as a testing tool:
+Tests web applications only: Selenium supports the testing of only web-based applications. Mobile applications, Captcha, and Barcode readers cannot be tested using Selenium unless integrated with third-party tools like Appium and TestNG.
+No built-in reporting and test management facility: Selenium can generate reports only using third-party tools like TestNG or JUnit.
+Unavailability of reliable tech support: Since Selenium is an open-source tool, no dedicated support for user issues is available.
+May require the knowledge of programming languages: Some prior programming knowledge is required to use Selenium.
+5.	What is automation testing, and what are its advantages?
+
+Automation Testing or Test Automation is a process of automating the manual testing process of an application or a system by using testing tools that allow you to create scripts that can be executed repeatedly, generating detailed test reports of the application or system under test.
+The advantages of Automated Testing are:
+It supports both the performance and functional testing of an application or system.
+It facilitates the execution of repeated test cases.
+It allows the parallel execution of the test cases.
+It improves the accuracy and efficiency of the system by reducing the manual intervention of humans to generate test cases.
+It helps in testing a large-scale test matrix.
+It saves valuable time and money for the testing team involved in the project.
+6.	Why should Selenium be selected as a testing tool for web applications or systems?
+Selenium provides the following advantages, which make it an excellent automated testing framework:
+It is free and open-source software with a large user base and supports providing community.
+It has cross-browser compatibility and supports multiple browsers like Google Chrome, Mozilla Firefox, Internet Explorer, Edge, Opera, Safari, etc.
+It supports multiple operating systems such as Windows, Linux, macOS, etc.
+It facilitates the usage of multiple programming languages including Scala, Ruby, Python, PHP, Perl, Java, Groovy, C#, etc.
+It provides support for distributed testing as well.
+7.	 What are the basic steps to create a Selenium WebDriver test case?
+The basic steps to create a Selenium WebDriver test case include:
+Launching a web browser
+Navigating to a web page
+Interacting with web elements
+Performing actions on web elements
+Verifying expected results
+8.	What is a WebElement?
+A WebElement is an object in a web page that can be interacted with using Selenium WebDriver. Examples of web elements include buttons, links, text fields, and dropdown menus. 
+9.	How do you locate a WebElement using Selenium WebDriver?
+You can locate a WebElement using various methods, such as ID, name, class name, tag name, link text, and partial link text.
+10.	What is the difference between findElement() and findElements() in Selenium WebDriver?
+findElement() returns a single WebElement that matches the specified locator, while findElements() returns a list of all WebElements that match the specified locator.
+11.	What is the difference between getText() and getAttribute() in Selenium WebDriver?
+getText() returns the visible text of a WebElement, while getAttribute() returns the value of the specified attribute of a WebElement.Selenium WebDriver with Java
+12.	Why use Java with Selenium WebDriver?
+Java is a popular programming language that is widely used in the industry. It provides a robust set of libraries and frameworks that can be used to build powerful test automation frameworks with Selenium WebDriver.
+13.	What are the prerequisites for using Java with Selenium WebDriver?
+The prerequisites for using Java with Selenium WebDriver include:
+Java Development Kit (JDK) installed on your machine
+A Java IDE, such as Eclipse or IntelliJ IDEA
+The Selenium WebDriver Java bindings
+The WebDriver executable for the browser you want to test
+14.	How do you set up a Java project for Selenium WebDriver?
+You can set up a Java project for Selenium WebDriver by following these steps:
+Create a new Java project in your IDE
+Add the Selenium WebDriver Java bindings to your project’s build path
+Download the WebDriver executable for the browser you want to test
+Create a new WebDriver instance and start automating your tests
+15.	How do you create a WebDriver instance in Java?
+You can create a WebDriver instance in Java using the following code:
+WebDriver driver = new ChromeDriver();
+This creates a new WebDriver instance for the Chrome browser.
+16.	What is Selenium WebDriver with Java?
+Selenium WebDriver with Java is an open-source tool that enables automated testing of web applications in Java programming language. It provides a set of APIs for interacting with web browsers and performing actions on web elements.
+ 
+17.	What are the different components of Selenium WebDriver with Java?
+The different components of Selenium WebDriver with Java include:
+WebDriver API: A set of APIs for interacting with web browsers
+Selenium Grid: A tool for distributing tests across multiple machines and browsers
+TestNG: A testing framework for test execution and reporting
+Maven: A build automation tool for managing dependencies and building projects
+18.	What are the different types of locators in Selenium WebDriver with Java?
+The different types of locators in Selenium WebDriver with Java include:
+ID
+Name
+Class Name
+Tag Name
+Link Text
+Partial Link Text
+CSS Selector
+XPath
+19.	What is a WebElement in Selenium WebDriver with Java?
+A WebElement in Selenium WebDriver with Java is a representation of a web element on a web page, such as a text box, button, or link. It provides methods for interacting with the element, such as clicking, sending keys, or getting its text.
+20.	How do you find a WebElement in Selenium WebDriver with Java?
+You can find a WebElement in Selenium WebDriver with Java by using one of the locator strategies provided by the WebDriver API, such as findElement(By.id(“elementId”)). This returns a WebElement instance that represents the located element on the web page.
+21.	What is the difference between implicit and explicit waits in Selenium WebDriver with Java?
+Implicit waits in Selenium WebDriver with Java are set globally for the WebDriver instance and specify a maximum time to wait for an element to be found or an action to be performed before throwing a NoSuchElementException or a TimeoutException.
+ Explicit waits, on the other hand, are applied to specific elements and actions and use the WebDriverWait class to wait for a specific condition to be true before proceeding with the execution of the test.
+
+
